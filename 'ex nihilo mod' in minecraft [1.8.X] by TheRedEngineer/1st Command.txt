@@ -1,0 +1,648 @@
+summon MinecartCommandBlock ~ ~3 ~ {Command:gamerule commandBlockOutput false,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~8 ~2 ~6 ~8 ~6 ~6 redstone_block,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~8 ~2 ~3 ~8 ~6 ~3 redstone_block,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~7 ~5 ~7 ~9 ~5 ~7 bedrock,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~7 ~5 ~4 ~9 ~5 ~4 bedrock,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~7 ~3 ~7 ~9 ~3 ~7 bedrock,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~7 ~3 ~4 ~9 ~3 ~4 bedrock,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~2 ~2 ~14 ~6 ~8 ~14 redstone_block,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~15 {Time:1,TileID:137,TileEntityData:{Command:
+
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+setblock ~-2 ~-6 ~-15 command_block 0 replace
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+fill ~-2 ~-2 ~-15 ~-2 ~-5 ~-15 air
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+/tellraw @p ["",{"text":"The first part of the machine is installed, but you need the second command to complete it. Click on this text HERE, copy the command from the website and paste it into the commandblock which says INSERT SECOND COMMAND HERE","color":"gold","clickEvent":{"action":"open_url","value":"http://pastebin.com/raw.php?i=ucpHUaBi"},"hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Click to get the second command"}]}}}]
+}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon ArmorStand ~ ~-2 ~ {NoGravity:1,Invisible:1,Small:1,CustomName:insert_second_command_here,CustomNameVisible:1},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:-,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~10 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=1,score_raint=240] ~ ~-1.8 ~ /summon ArmorStand ~ ~ ~ {NoGravity:1,CustomName:raina,Invisible:1,Equipment:[{},{},{},{},{id:"stained_glass",Damage:11,Count:1b}]}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=240,score_raint=480] ~ ~-1.6 ~ /summon ArmorStand ~ ~ ~ {NoGravity:1,CustomName:raina,Invisible:1,Equipment:[{},{},{},{},{id:"stained_glass",Damage:11,Count:1b}]}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=480,score_raint=720] ~ ~-1.4 ~ /summon ArmorStand ~ ~ ~ {NoGravity:1,CustomName:raina,Invisible:1,Equipment:[{},{},{},{},{id:"stained_glass",Damage:11,Count:1b}]}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=720,score_raint=960] ~ ~-1.2 ~ /summon ArmorStand ~ ~ ~ {NoGravity:1,CustomName:raina,Invisible:1,Equipment:[{},{},{},{},{id:"stained_glass",Damage:11,Count:1b}]}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=960,score_raint=1190] ~ ~-1.1 ~ /summon ArmorStand ~ ~ ~ {NoGravity:1,CustomName:raina,Invisible:1,Equipment:[{},{},{},{},{id:"stained_glass",Damage:11,Count:1b}]}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=1190] ~ ~-0.98 ~ /summon ArmorStand ~ ~ ~ {NoGravity:1,CustomName:raina,Invisible:1,Equipment:[{},{},{},{},{id:"stained_glass",Damage:11,Count:1b}]}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] wbucket 1 {Item:{id:minecraft:water_bucket}}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~8 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[score_dust_min=1] tdust 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Barrel,type=ArmorStand] ~ ~ ~ detect ~ ~ ~ flowing_water 0 setblock ~ ~ ~ air
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Barrel,type=ArmorStand] ~ ~ ~ detect ~ ~ ~ flowing_water 0 scoreboard players set @e[name=Barrel,r=0] raint 1200
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] clay 1 {Item:{id:minecraft:clay}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_tdust_min=10] ~ ~ ~ execute @e[score_raint_min=1200,r=0] ~ ~ ~ entitydata @e[r=0,score_dust_min=1] {Motion:[0.0,0.3,0.0],Item:{id:minecraft:clay,Damage:0,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_clay_min=1] ~ ~ ~ scoreboard players set @e[r=0,score_raint_min=1200] raint 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:apple}}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~9 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_tbucket_min=1,score_tbucket=1] ~ ~ ~ scoreboard players set @e[score_raint_min=1200,r=0] raint 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=1200] ~ ~ ~ scoreboard players set @e[score_bucket_min=1,r=0] ttbucket 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_tbucket_min=1,score_tbucket=1] ~ ~ ~ /particle droplet ~ ~ ~ 0.2 0.2 0.2 0.1 1000
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[score_ttbucket_min=1] tbucket 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+entitydata @e[score_tbucket_min=5,score_tbucket=5] {Motion:[0.0,0.4,0.0],Item:{id:minecraft:water_bucket}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_rain_min=1] ~ ~ ~ scoreboard players set @e[type=ArmorStand,name=Barrel] rain 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] dust 1 {Item:{id:minecraft:sand}}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~7 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=1,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:dye,Damage:8,Count:2,tag:{display:{Name:Stone}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[score_dirt_min=1] ldirt 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[score_sdirt_min=100] sdirt 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[type=ArmorStand,name=sit] sdirt 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] dirt 1 {Item:{id:minecraft:dirt}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:rotten_flesh}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:string}}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~6 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=11,score_ldirt=11] ~ ~ ~ execute @e[score_sdirt_min=1,r=1] ~ ~ ~ kill @e[type=Item,score_ldirt_min=1,r=1]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=1,r=0] ~ ~1 ~ particle iconcrack_3 ~ ~ ~ 0 0 0 0.1 100
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=1,score_sdirt=2,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:sapling,Damage:1,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=1,score_sdirt=70,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:dye,Damage:8,Count:2,tag:{display:{Name:Stone}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=5,score_sdirt=6,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:sapling,Damage:4,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=8,score_sdirt=9,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:sapling,Damage:2,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=11,score_sdirt=13,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:carrot,Damage:0,Count:1}}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~5 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=14,score_sdirt=16,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:potato,Damage:0,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=17,score_sdirt=20,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:reeds,Damage:0,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=23,score_sdirt=25,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:melon_seeds,Damage:0,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=26,score_sdirt=29,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:pumpkin_seeds,Damage:0,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ldirt_min=10,score_ldirt=10] ~ ~ ~ execute @e[score_sdirt_min=30,score_sdirt=36,r=0] ~ ~ ~ summon Item ~ ~1 ~ {Motion:[0.0,0.3,0.0],Item:{id:minecraft:spawn_egg,Damage:66,Count:1,tag:{display:{Name:Grass_Seeds,Lore:["Place this on a dirt block to get grass"]}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+tp @e[type=Witch,name=Grass_Seeds] ~ ~-1000 ~
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Grass_Seeds,type=Witch] ~ ~ ~ detect ~ ~-1 ~ dirt 0 setblock ~ ~-1 ~ grass
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~4 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a holdhammer 1 {SelectedItem:{id:minecraft:wooden_pickaxe,tag:{display:{Name:Wooden Hammer}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a holdhammer 1 {SelectedItem:{id:minecraft:stone_pickaxe,tag:{display:{Name:Stone Hammer}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a holdhammer 1 {SelectedItem:{id:minecraft:iron_pickaxe,tag:{display:{Name:Iron Hammer}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @a[score_tstone_min=1] tstone 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] stone 1 {Item:{id:minecraft:cobblestone}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a digstone 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a holdhammer 0
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~3 {Time:1,TileID:137,TileEntityData:{Command:
+execute @a[score_tstone_min=2,score_tstone=2] ~ ~ ~ entitydata @e[type=Item,r=4,score_stone_min=1] {Item:{id:minecraft:gravel,Count:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_digstone_min=1,score_holdhammer_min=1] tstone 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_tstone_min=4] tstone 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] gravel 1 {Item:{id:minecraft:gravel}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_tgravel_min=5] tgravel 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @a[score_tgravel_min=1] tgravel 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a diggravel 0
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~4 ~2 ~2 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_diggravel_min=1,score_holdhammer_min=1] tgravel 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @a[score_tgravel_min=2,score_tgravel=2] ~ ~ ~ entitydata @e[type=Item,r=4,score_gravel_min=1] {Item:{id:minecraft:sand}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[type=Item] lavab 1 {Item:{id:minecraft:lava_bucket}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_mb_min=1000] ~ ~ ~ scoreboard players add @e[score_bucket_min=1,r=1] lbucket 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+fill ~-1 ~ ~ ~2 ~6 ~10 redstone_block 0 replace stone
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~12 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:sapling,Damage:4}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:sapling,Damage:5}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[score_sapling_min=1] stimer 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] bucket 1 {Item:{id:minecraft:bucket}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+kill @e[type=ArmorStand,name=raina]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_raint_min=1200] ~ ~ ~ /particle droplet ~ ~1.3 ~ 0 0 0 0.1 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[name=Barrel,score_rain_min=1] raint 1
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~11 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_kb_min=1,score_kb=1] ~ ~ ~ summon Item ~ ~ ~ {Item:{id:minecraft:spawn_egg,Damage:120,Count:1,tag:{display:{Name:Barrel}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+kill @e[score_kb_min=10]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Barrel] ~ ~ ~ particle smoke ~ ~ ~ 0 0 0 0.01 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:sapling}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:sapling,Damage:1}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:sapling,Damage:2}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] sapling 1 {Item:{id:minecraft:sapling,Damage:3}}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~10 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_kb_min=1,score_kb=1] ~ ~ ~ kill @e[type=ArmorStand,r=3,name=wall]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_is_min=1] ~ ~ ~ scoreboard players add @e[name=Barrel,r=1] kb 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Barrel,score_bt_min=1,score_bt=1] ~ ~ ~ /summon ArmorStand ~0.1 ~-2.4 ~ {Invisible:1b,NoGravity:1b,ShowArms:1b,Rotation:[90f],Equipment:[{},{},{},{},{id:"banner",Damage:3,Count:1b}],Pose:{RightArm:[319f,0f,0f]},CustomName:wall}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Barrel,score_bt_min=1,score_bt=1] ~ ~ ~ /summon ArmorStand ~ ~-2.4 ~-0.1 {Invisible:1b,NoGravity:1b,ShowArms:1b,Equipment:[{},{},{},{},{id:"banner",Damage:3,Count:1b}],Pose:{RightArm:[319f,0f,0f]},CustomName:wall}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Barrel,score_bt_min=1,score_bt=1] ~ ~ ~ /summon ArmorStand ~ ~-2.4 ~0.1 {Invisible:1b,NoGravity:1b,ShowArms:1b,Rotation:[180f],Equipment:[{},{},{},{},{id:"banner",Damage:3,Count:1b}],Pose:{RightArm:[319f,0f,0f]},CustomName:wall}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=Barrel,score_bt_min=1,score_bt=1] ~ ~ ~ /summon ArmorStand ~-0.1 ~-2.4 ~ {CustomName:wall,Invisible:1b,NoGravity:1b,ShowArms:1b,Rotation:[270f],Equipment:[{},{},{},{},{id:"banner",Damage:3,Count:1b}],Pose:{RightArm:[319f,0f,0f]}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[type=ArmorStand,name=Barrel] bt 1
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~9 {Time:1,TileID:137,TileEntityData:{Command:
+kill @e[score_sitt_min=2]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_is_min=1] ~ ~ ~ scoreboard players add @e[name=sit,r=1] sitt 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sitt_min=1,score_sitt=1] ~ ~ ~ kill @e[type=ArmorStand,r=2,name=!sit]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sitt_min=1,score_sitt=1] ~ ~ ~ summon Item ~ ~1 ~ {Item:{id:minecraft:spawn_egg,Damage:120,Count:1,tag:{display:{Name:Sieve}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sit_min=1] ~ ~ ~ particle enchantmenttable ~ ~ ~ 0 0.2 0 0.2 2
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+tp @e[name=Barrel,type=Villager] ~ ~-1000 ~
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[type=Villager,name=Barrel] ~ ~ ~ summon ArmorStand ~ ~ ~ {Small:1,Invisible:1,CustomName:Barrel,NoGravity:1}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~8 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[name=sit] sit 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sit_min=1,score_sit=1] ~0.65 ~-1.45 ~-0.2 /summon ArmorStand ~ ~ ~ {Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Equipment:[{id:"minecraft:stick",Count:1b},{},{},{},{}],DisabledSlots:2039583,Pose:{RightArm:[260f,0f,0f]},Invisible:1}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sit_min=1,score_sit=1] ~0.65 ~-1.45 ~-0.7 /summon ArmorStand ~ ~ ~ {Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Equipment:[{id:"minecraft:stick",Count:1b},{},{},{},{}],DisabledSlots:2039583,Pose:{RightArm:[260f,0f,0f]},Invisible:1}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sit_min=1,score_sit=1] ~0.1 ~-1.45 ~-0.7 /summon ArmorStand ~ ~ ~ {Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Equipment:[{id:"minecraft:stick",Count:1b},{},{},{},{}],DisabledSlots:2039583,Pose:{RightArm:[260f,0f,0f]},Invisible:1}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sit_min=1,score_sit=1] ~0.1 ~-1.45 ~-0.2 /summon ArmorStand ~ ~ ~ {Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Equipment:[{id:"minecraft:stick",Count:1b},{},{},{},{}],DisabledSlots:2039583,Pose:{RightArm:[260f,0f,0f]},Invisible:1}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sit_min=1,score_sit=1] ~ ~-0.65 ~ /summon ArmorStand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:1b,Equipment:[{},{},{},{},{id:"trapdoor",Count:1b}],DisabledSlots:2039581,Pose:{RightArm:[360f,0f,0f]}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_sit_min=1,score_sit=1] ~0.4 ~ ~-0.3 /summon ArmorStand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:1b,Equipment:[{id:"web",Count:1b},{},{},{},{}],DisabledSlots:2039581,Pose:{RightArm:[360f,0f,0f]}}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~7 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=infa,score_infat_min=3600] ~ ~ ~ particle iconcrack_287 ~ ~4 ~ 1 2 1 0.1 14
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=infa,score_infat_min=4800] ~ ~ ~ particle iconcrack_287 ~ ~4 ~ 1 2 1 0.1 14
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_infat_min=6000,score_infat=6000] ~ ~ ~ fill ~-2 ~ ~-2 ~2 ~6 ~2 web 0 replace leaves
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+kill @e[score_infat_min=6001]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_infat_min=6000,score_infat=6000] ~ ~ ~ /playsound mob.silverfish.say @a ~ ~ ~ 10 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+tp @e[name=Sieve,type=Villager] ~ ~-1000 ~
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[type=Villager,name=Sieve] ~ ~ ~ summon ArmorStand ~ ~ ~ {CustomName:sit,Small:1,NoGravity:1,Invisible:1}
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~6 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[score_inft_min=1] inftt 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_iss_min=1] ~ ~ ~ detect ~ ~1 ~ log 0 scoreboard players set @e[type=Item,score_iss_min=1,r=0] inft 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+kill @e[score_inftt_min=3,score_inftt=3]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[type=ArmorStand,name=infa] infat 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=infa] ~ ~ ~ particle iconcrack_287 ~ ~4 ~ 1 2 1 0.1 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=infa,score_infat_min=1200] ~ ~ ~ particle iconcrack_287 ~ ~4 ~ 1 2 1 0.1 10
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=infa,score_infat_min=2400] ~ ~ ~ particle iconcrack_287 ~ ~4 ~ 1 2 1 0.1 10
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~5 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_hc_min=0,score_hc=0] dl2 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] iss 1 {Item:{id:minecraft:string,tag:{display:{Name:Silkworm}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_inftt_min=2,score_inftt=2] ~ ~ ~ summon ArmorStand ~ ~ ~ {Small:1,CustomName:infa,NoGravity:1,Invisible:1}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_dl2_min=20] dl2 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+give @a[score_dl2_min=20] string 1 0 {ench:[{id:15,lvl:0}],display:{Name:Silkworm}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_dl_min=8] dl 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+give @a[score_dl_min=8] sapling 1
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~4 {Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a[score_hc_min=0,score_hc=0] dl 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a hc 1 {SelectedItem:{id:minecraft:wooden_hoe,tag:{display:{Name:Crook}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @a hc 0
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_enct_min=3,score_enct=3] ~ ~ ~ kill @e[r=0,type=ArmorStand]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_enct_min=2,score_enct=2] ~ ~ ~ kill @e[score_id_min=1,r=1]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] id 1 {Item:{id:minecraft:dropper}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[score_enctt_min=1] enct 1
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~3 {Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_enc_min=4] ~ ~ ~ detect ~ ~1 ~ air 0 scoreboard players set @e[r=0,type=ArmorStand] enctt 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_enct_min=2,score_enct=2] ~ ~ ~ summon Item ~ ~1 ~ {CustomName:ExNihilo Crafting Table,CustomNameVisible:1,Item:{id:minecraft:spawn_egg,Damage:101,Count:1,tag:{display:{Name:ExNihilo_Crafting_Table,Lore:["You need this for crafting"]}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_enc_min=2,score_enc=2] ~ ~ ~ setblock ~ ~1 ~ dropper 0 replace {CustomName:ExNihilo Crafting Table}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+tp @e[name=ExNihilo_Crafting_Table] ~ ~-1000 ~
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[name=ExNihilo_Crafting_Table] ~ ~ ~ /summon ArmorStand ~ ~-1 ~ {Invisible:1b,Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,Equipment:[{},{},{},{},{id:"crafting_table",Count:1b}],DisabledSlots:2039583,CustomName:ENC}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[name=ENC] enc 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @a[score_it_min=2,score_it=2] ~ ~ ~ particle smoke ~ ~ ~ 0 0 0 0.1 10
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:summon FallingSand ~2 ~2 ~2 {Time:1,TileID:137,TileEntityData:{Command:
+entitydata @e[score_it_min=3] {CustomName:ExNihilo Crafting Table,CustomNameVisible:1,Item:{id:minecraft:spawn_egg,Damage:101,tag:{display:{Name:ExNihilo_Crafting_Table,Lore:["You need this for crafting"]}}}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_it_min=2,score_it=2] ~ ~ ~ kill @e[score_ic_min=1,r=0]
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players add @e[score_it_min=1] it 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+execute @e[score_ic_min=1] ~ ~ ~ scoreboard players set @e[score_is_min=1,r=0] it 1
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] is 1 {Item:{id:minecraft:stick}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+scoreboard players set @e[type=Item] ic 1 {Item:{id:minecraft:crafting_table}}
+},Riding:{id:"FallingSand",Time:1,TileID:137,TileEntityData:{Command:
+fill ~1 ~ ~ ~3 ~6 ~10 stone 0 replace redstone_block
+}}}}}}}},
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~2 ~2 ~2 ~9 ~8 ~15 air,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~1 ~2 ~1 ~10 ~8 ~16 stained_glass 8,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add inft dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add dl stat.mineBlock.minecraft.leaves,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add iss dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add meltlvl dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add tstone dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add rtimer dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add ktimer dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add digstone stat.mineBlock.minecraft.cobblestone,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add raint dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add mb dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add sapling dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add enctt dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add ic dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add id dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add dust dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add lavab dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add rain dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add dirt dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add is dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add it dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add dl2 stat.mineBlock.minecraft.leaves,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add lgravel dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add lbucket dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add infat dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add bucket dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add gravel dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add tdust dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add holdhammer dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add bf dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add clay dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add bt dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add ldirt dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add kb dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add lsand dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add inftt dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add enc dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add crl dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add sit dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add ttbucket dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add sitt dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add stimer dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add slife dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add stone dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add kompost dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add tgravel dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add tbucket dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add enct dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add mbl dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add sdirt dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add diggravel stat.mineBlock.minecraft.gravel,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add hc dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:scoreboard objectives add wbucket dummy,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:gamerule commandBlockOutput false,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~1 ~ ~1 ~10 ~ ~16 bedrock,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:fill ~1 ~1 ~1 ~10 ~1 ~16 stained_hardened_clay 7,
+Riding:
+{
+id:"MinecartCommandBlock",
+Command:kill @e[type=MinecartCommandBlock,r=1],
+
+Riding:{id:"FallingSand",
+TileID:157,
+Time:1,
+Riding:{
+id:"FallingSand",
+TileID:152,Time:1}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
