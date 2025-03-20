@@ -1,0 +1,19 @@
+{
+"item.armor.equip_generic": {
+		 "sounds": [
+		"custom/blank"
+		]
+},
+"custom.fail": {
+		 "sounds": [
+		"custom/fail"
+		]
+},
+"custom.blank": {
+		 "sounds": [
+		"custom/blank"
+		]
+},
+"blank":{
+"sounds":[{"name":"custom/blank","stream":true}],"category":"player"}
+}
