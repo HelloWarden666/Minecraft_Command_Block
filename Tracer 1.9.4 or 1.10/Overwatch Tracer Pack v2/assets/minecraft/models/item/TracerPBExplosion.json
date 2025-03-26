@@ -1,0 +1,52 @@
+{
+"__comment": "Designed by Mcmakistein with BDcraft Cubik PRO 0.96 Beta - http://bdcraft.net",
+"textures": {
+    "texture": "custom/PB1",
+    "PB2": "custom/PB2",
+    "PB3": "custom/PB3",
+    "PB4": "custom/PB4"
+},
+"elements": [ 
+{
+    "from": [ 8, -12, -10.4 ],
+    "to": [ 8.0625, 24.8, 26.4 ],
+    "faces": {
+        "west":  { "uv": [ 0, 0, 1, 1 ], "texture": "#texture" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+},
+{
+    "from": [ 21, -12, -5 ],
+    "to": [ 21.0625, 24.8, 31.8 ],
+    "rotation": { "origin": [ 21, -12, -5 ], "axis": "y", "angle": -45 },
+    "faces": {
+        "west":  { "uv": [ 0, 0, 1, 1 ], "texture": "#texture" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+},
+{
+    "from": [ -5, -12, -5 ],
+    "to": [ -4.9375, 24.8, 31.8 ],
+    "rotation": { "origin": [ -5, -12, -5 ], "axis": "y", "angle": 45 },
+    "faces": {
+        "west":  { "uv": [ 0, 0, 1, 1 ], "texture": "#texture" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+},
+{
+    "from": [ -10.4, -12, 8 ],
+    "to": [ 26.4, 24.8, 8.0625 ],
+    "faces": {
+        "north": { "uv": [ 0, 0, 1.5, 1 ], "texture": "#texture" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+    }
+}
+],
+"display": {
+    "head": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, -24, 0 ],
+        "scale": [ 3, 3, 3 ]
+    }
+}
+}

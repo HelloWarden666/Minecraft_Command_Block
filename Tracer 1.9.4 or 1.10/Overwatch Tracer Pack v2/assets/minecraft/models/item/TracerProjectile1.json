@@ -1,0 +1,27 @@
+{
+"__comment": "Designed by Mcmakistein with BDcraft Cubik PRO 0.96 Beta - http://bdcraft.net",
+"textures": {
+    "texture": "custom/Tracer6"
+},
+"elements": [ 
+{
+    "from": [ 18, -14, -8.5 ],
+    "to": [ 19, -12.5, -7.5 ],
+    "faces": {
+        "down":  { "uv": [ 7.5, 10.5, 6.5, 9.5 ], "texture": "#texture" },
+        "up":    { "uv": [ 8.5, 9.5, 9.5, 10.5 ], "texture": "#texture" },
+        "north": { "uv": [ 6.5, 6.5, 7.5, 7.5 ], "texture": "#texture" },
+        "south": { "uv": [ 8.5, 6.5, 9.5, 7.5 ], "texture": "#texture" },
+        "west":  { "uv": [ 9.5, 6.5, 10.5, 7.5 ], "texture": "#texture" },
+        "east":  { "uv": [ 5.5, 6.5, 6.5, 7.5 ], "texture": "#texture" }
+    }
+}
+],
+"display": {
+    "head": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, -24, 0 ],
+        "scale": [ 0.9, 0.6, 0.9 ]
+    }
+}
+}
