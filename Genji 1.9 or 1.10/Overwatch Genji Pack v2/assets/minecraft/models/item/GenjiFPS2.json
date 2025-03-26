@@ -1,0 +1,65 @@
+{
+"__comment": "Designed by Mcmakistein with BDcraft Cubik PRO 0.96 Beta - http://bdcraft.net",
+"textures": {
+    "texture": "custom/Genji1",
+    "Genji2": "custom/Genji2",
+    "Genji3": "custom/Genji3",
+    "Genji4": "custom/Genji4",
+    "Genji5": "custom/Genji5",
+    "Genji6": "custom/Genji6",
+    "Genji7": "custom/Genji7"
+},
+"elements": [ 
+{
+    "from": [ 6.25, -0.25, 11.25 ],
+    "to": [ 6.3125, 9.75, 21.25 ],
+    "rotation": { "origin": [ 6.25, -0.25, 11.25 ], "axis": "y", "angle": 45 },
+    "faces": {
+        "west":  { "uv": [ 16, 16, 0, 0 ], "rotation": 270, "texture": "#Genji5" },
+        "east":  { "uv": [ 16, 0, 0, 16 ], "rotation": 270, "texture": "#Genji5" }
+    }
+}
+],
+"display": {
+    "thirdperson_righthand": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0, 0, 0 ]
+    },
+    "thirdperson_lefthand": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0, 0, 0 ]
+    },
+    "head": {
+        "rotation": [ 0, 180, 0 ],
+        "translation": [ 0, -8.69, 2.27 ],
+        "scale": [ 2.7, 2.7, 2.7 ]
+    },
+    "ground": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0, 0, 0 ]
+    },
+    "fixed": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0, 0, 0 ]
+    },
+    "firstperson_righthand": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0, 0, 0 ]
+    },
+    "firstperson_lefthand": {
+        "rotation": [ 43, -171, -27 ],
+        "translation": [ -24, -4.91, 6.61 ],
+        "scale": [ 1.6, 1.6, 1.6 ]
+    },
+    "gui": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0, 0, 0 ]
+    }
+}
+}
