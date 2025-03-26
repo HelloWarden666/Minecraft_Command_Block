@@ -1,0 +1,16 @@
+{
+"l_shoot":{
+"sounds":[{"name":"custom/l_shoot","stream":true}],"category":"master"},
+"l_ult":{
+"sounds":[{"name":"custom/l_ult","stream":true}],"category":"master"},
+"l_boop":{
+"sounds":[{"name":"custom/l_boop","stream":true}],"category":"master"},
+"l_hit":{
+"sounds":[{"name":"custom/l_hit","stream":true}],"category":"master"},
+"l_amp":{
+"sounds":[{"name":"custom/l_amp","stream":true}],"category":"master"},
+"l_switch":{
+"sounds":[{"name":"custom/l_switch","stream":true}],"category":"master"},
+"dubstep":{
+"sounds":[{"name":"custom/dubstep","stream":true}],"category":"master"}
+}
